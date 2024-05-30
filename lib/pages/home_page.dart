@@ -1,8 +1,10 @@
 import 'package:bwa_cozy/models/city.dart';
 import 'package:bwa_cozy/models/space.dart';
+import 'package:bwa_cozy/models/tips.dart';
 import 'package:bwa_cozy/theme.dart';
 import 'package:bwa_cozy/widgets/city_card.dart';
 import 'package:bwa_cozy/widgets/space_card.dart';
+import 'package:bwa_cozy/widgets/tips_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -91,7 +93,34 @@ class HomePage extends StatelessWidget {
                           country: 'Indonesia',
                           rating: 3,
                         )),
-                        SizedBox(height: 30),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 30),
+                  // NOTE: TIPS & GUIDANCE
+                  Padding(
+                    padding: EdgeInsets.only(left: edge),
+                    child: Text(
+                      'Tips & Guidance',
+                      style: regularTextStyle.copyWith(fontSize: 16),
+                    ),
+                  ),
+                  SizedBox(height: 16),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: edge),
+                    child: Column(
+                      children: [
+                        TipsCard(Tips(
+                            id: 1,
+                            title: 'City Guidelines',
+                            imageUrl: 'assets/tips1.png',
+                            updatedAt: '20 Apr')),
+                        SizedBox(height: 20),
+                        TipsCard(Tips(
+                            id: 1,
+                            title: 'Jakarta Fairship',
+                            imageUrl: 'assets/tips2.png',
+                            updatedAt: '11 Dec'))
                       ],
                     ),
                   )
