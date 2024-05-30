@@ -26,3 +26,5 @@ TextStyle purpleTextStyle = GoogleFonts.poppins(
   fontWeight: FontWeight.w500,
   color: purpleColor,
 );
+
+double edge = 24;
